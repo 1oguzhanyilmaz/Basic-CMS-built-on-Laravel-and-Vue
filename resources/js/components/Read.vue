@@ -1,35 +1,28 @@
 <template>
     <div id="posts">
-        <p class="border p-3" v-for="post in posts">
+        <!--<p>### Component Read ###</p>-->
+
+        <!--posts-->
+        <p class="border p-2" v-for="post in posts">
             {{ post.title }}
+
             <router-link :to="{ name: 'update', params: { postId : post.id } }">
-                <button type="button" class="p-1 mx-3 float-right btn btn-light">
+                <button type="button" class="p-1 mx-3 float-right btn btn-primary btn-sm">
                     Update
                 </button>
             </router-link>
-            <button
-                    type="button"
-                    @click="deletePost(post.id)"
-                    class="p-1 mx-3 float-right btn btn-danger"
-            >
+
+            <button type="button" @click="deletePost(post.id)" class="p-1 mx-3 float-right btn btn-danger btn-sm">
                 Delete
             </button>
         </p>
+
+        <!--next and prev-->
         <div>
-            <button
-                    v-if="next"
-                    type="button"
-                    @click="navigate(next)"
-                    class="m-3 btn btn-primary"
-            >
+            <button v-if="next" type="button" @click="navigate(next)" class="m-3 btn btn-primary">
                 Next
             </button>
-            <button
-                    v-if="prev"
-                    type="button"
-                    @click="navigate(prev)"
-                    class="m-3 btn btn-primary"
-            >
+            <button v-if="prev" type="button" @click="navigate(prev)" class="m-3 btn btn-primary">
                 Previous
             </button>
         </div>

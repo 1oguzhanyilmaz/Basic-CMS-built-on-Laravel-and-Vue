@@ -1,17 +1,20 @@
 <template>
     <div class="container">
         <form>
-            <div :class="['form-group m-1 p-3', successful ? 'alert-success' : '']">
-                <span v-if="successful" class="label label-sucess">Updated!</span>
-            </div>
 
-            <div :class="['form-group m-1 p-3', error ? 'alert-danger' : '']">
-            <span v-if="errors.title" class="label label-danger">
-              {{ errors.title[0] }}
-            </span>
-                <span v-if="errors.body" class="label label-danger">
-              {{ errors.body[0] }}
-            </span>
+            <div class="" v-if="error">
+                <div :class="['form-group m-1 p-3', successful ? 'alert-success' : '']">
+                    <span v-if="successful" class="label label-sucess">Updated!</span>
+                </div>
+
+                <div :class="['form-group m-1 p-3', error ? 'alert-danger' : '']">
+                    <span v-if="errors.title" class="label label-danger">
+                      {{ errors.title[0] }}
+                    </span>
+                            <span v-if="errors.body" class="label label-danger">
+                      {{ errors.body[0] }}
+                    </span>
+                </div>
             </div>
 
             <div class="form-group">

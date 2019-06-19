@@ -3,6 +3,7 @@ require('./bootstrap');
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Homepage from './components/Homepage'
+import Dashboard from './components/Dashboard'
 import Create from './components/Create'
 import Read from './components/Read'
 import Update from './components/Update'
@@ -15,6 +16,12 @@ const router = new VueRouter({
     routes: [
         {
             path: '/admin/dashboard',
+            name: 'dashboard',
+            component: Dashboard,
+            props: true
+        },
+        {
+            path: '/admin/posts',
             name: 'read',
             component: Read,
             props: true
