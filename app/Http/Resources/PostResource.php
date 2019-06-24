@@ -16,8 +16,13 @@ class PostResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            // 'category_id' => $this->category_id,
+            // 'category' => Category::findOrFail($this->category_id),
+            // 'category' => Category::select('name')->where('id', $this->category_id)->first(),
+            'category' => $this->category,
+            'tags' => $this->tags,
             'title' => $this->title,
-            'body' => $this->body,
+            'content' => $this->content,
             'image' => $this->image,
             'created_at' => (string) $this->created_at,
             'updated_at' => (string) $this->updated_at,

@@ -13,11 +13,6 @@
 
 use App\Http\Controllers\Blog\PostsController;
 
-Route::get('/', 'WelcomeController@index')->name('welcome');
-Route::get('blog/posts/{post}', [PostsController::class, 'show'])->name('blog.show');
-Route::get('blog/categories/{category}', [PostsController::class, 'category'])->name('blog.category');
-Route::get('blog/tags/{tag}', [PostsController::class, 'tag'])->name('blog.tag');
-
 Auth::routes();
 
 Route::group(['prefix'=>'admin','middleware'=>['auth']],function (){
@@ -40,20 +35,19 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){
     Route::post('/users/{user}/make-admin', 'UsersController@makeAdmin')->name('users.make-admin'); // +
 });
 
-
-
+//Route::get('/', 'WelcomeController@index')->name('welcome');
+//Route::get('blog/posts/{post}', [PostsController::class, 'show'])->name('blog.show');
+//Route::get('blog/categories/{category}', [PostsController::class, 'category'])->name('blog.category');
+//Route::get('blog/tags/{tag}', [PostsController::class, 'tag'])->name('blog.tag');
 
 //Route::get('/', 'PostController@all');
 //Route::get('/posts/{post}', 'PostController@single');
-//
 //Route::get('/home', 'HomeController@index')->name('home');
-//
-//
 //Route::get('/admin/{any}', 'AdminController@index')->where('any', '.*');
-//
 //Route::get('/{post}/comments', 'CommentController@index');
 //Route::post('/{post}/comments', 'CommentController@store');
 
+Route::get('/{any}', 'SinglePageController@index')->where('any', '.*');
 
 
 
