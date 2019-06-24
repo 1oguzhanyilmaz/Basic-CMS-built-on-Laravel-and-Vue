@@ -1,27 +1,17 @@
-@extends('layouts.app')
-
-@section('content')
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-8 mx-auto">
-                <h1 class="my-4 text-center">Welcome to the Blog </h1>
-
-                @foreach ($posts as $post)
-                    <div class="card mb-4">
-                        <img class="card-img-top" src=" {!! !empty($post->image) ? '/uploads/posts/' . $post->image :  'http://placehold.it/750x300' !!} " alt="Card image cap">
-                        <div class="card-body">
-                            <h2 class="card-title text-center">{{ $post->title }}</h2>
-                            <p class="card-text"> {{ str_limit($post->body, $limit = 280, $end = '...') }} </p>
-                            <a href="/posts/{{ $post->id }}" class="btn btn-primary">Read More &rarr;</a>
-                        </div>
-                        <div class="card-footer text-muted">
-                            Posted {{ $post->created_at->diffForHumans() }} by
-                            <a href="#">{{ $post->user->name }} </a>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-        </div>
-    </div>
-@endsection
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{csrf_token()}}">
+    <title>Blog 0</title>
+    <link href=" {{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <router-view></router-view>
+</div>
+<script src="{{ asset('js/app.js') }}"></script>
+</body>
+</html>
