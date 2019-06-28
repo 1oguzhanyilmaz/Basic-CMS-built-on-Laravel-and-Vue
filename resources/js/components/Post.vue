@@ -8,11 +8,15 @@
                         <hr>
                         <h5>
                             {{ post.title }}
-                            <router-link :to="categoryLink" class="text-muted btn btn-sm float-right">{{post.category.name}}</router-link>
+                            <!--<span v-if="loading">{{ post.category.name }}</span>-->
+                            <router-link v-if="loading" :to="categoryLink" class="text-muted btn btn-sm float-right">{{post.category.name}}</router-link>
                         </h5>
                         <hr>
-                        <p>Post image</p>
-                        <p>{{ post.content }}</p>
+                        <p>
+                            <img v-if="post.image" :src="`/storage/${post.image}`" alt="post-img" style="width:100%;">
+                            <img v-else src="https://via.placeholder.com/300x150" alt="post-img" style="width:100%;">
+                        </p>
+                        <p v-html="post.content"></p>
                         <hr>
                         <p><strong>Tags</strong></p>
                         <template v-for="tag in (post.tags)">
@@ -30,7 +34,8 @@
         name: "Post",
         data(){
             return {
-                post: {}
+                post: {},
+                loading: false
             }
         },
         methods: {
@@ -40,13 +45,14 @@
         },
         computed: {
             categoryLink(){
-                return `/categories/${this.post.category.id}/posts`;
+                return `/categories/${this.post.category.slug}/posts`;
             }
         },
         created(){
-            axios.get(`/api/posts/${this.$route.params.id}`)
+            axios.get(`/api/posts/${this.$route.params.slug}`)
                 .then((response) => {
                     // console.log(response.data.data);
+                    this.loading = true;
                     this.post = response.data.data;
                 });
         }

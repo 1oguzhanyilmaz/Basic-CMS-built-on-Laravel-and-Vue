@@ -38,8 +38,7 @@
                 </div>
                 @if(isset($post))
                     <div class="form-group">
-                        {{--<img src="{{ asset('storage/' . $post->image) }}" alt="Image" style="width:100%;">--}}
-                        post image -> {{ $post->image }}
+                        <img src="{{ asset('storage/' . $post->image) }}" alt="Image" style="width:100%;">
                     </div>
                 @endif
                 <div class="form-group">

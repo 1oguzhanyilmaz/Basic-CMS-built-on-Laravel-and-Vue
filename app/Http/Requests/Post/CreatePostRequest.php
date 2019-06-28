@@ -28,14 +28,14 @@ class CreatePostRequest extends FormRequest
             'title' => 'required|unique:posts',
             'description' => 'required',
             'contents' => 'required',
-            'image' => 'image',
+            'image' => 'file|image|max:5000',
             'category' => 'required'
         ];
     }
 
     public function createPost()
     {
-        $image = $this->image->store('posts');
+        $image = $this->image->store('uploads','public');
 
         $post = Post::create([
             'title' => $this->title,

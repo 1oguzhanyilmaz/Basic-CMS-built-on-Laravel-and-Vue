@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
@@ -9,6 +10,16 @@ use Illuminate\Support\Facades\Storage;
 class Post extends Model
 {
     use SoftDeletes;
+    use Sluggable;
+
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
 
     protected $dates = [
         'published_at'

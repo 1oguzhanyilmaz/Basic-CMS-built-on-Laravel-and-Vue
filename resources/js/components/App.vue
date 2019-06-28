@@ -24,6 +24,12 @@
         <div class="container py-2">
             <router-view></router-view>
         </div>
+        <div class="container-fluid p-0 m-0">
+            <div class="jumbotron">
+                <h3 class="text-center">F o o t e r</h3>
+            </div>
+        </div>
+
     </div>
 </template>
 

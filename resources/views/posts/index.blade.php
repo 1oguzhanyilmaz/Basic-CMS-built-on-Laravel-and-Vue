@@ -25,10 +25,14 @@
                             <tbody>
                             @foreach($posts as $post)
                                 <tr>
-                                    <td>
-                                        {{--<img src="{{ asset('storage/' . $post->image) }}" alt="Image" width="50px">--}}
-                                        Post Image -> {{ $post->image }}
-                                    </td>
+                                    @if($post->image)
+                                        <td>
+                                            <img src="{{ asset('storage/' . $post->image) }}" alt="Image" width="50px">
+                                            {{--Post Imageee -> {{ 'storage/' . $post->image }}--}}
+                                        </td>
+                                    @else
+                                        <td>No image</td>
+                                    @endif
                                     <td>
                                         {{ str_limit($post->title, 30, '...') }}
                                     </td>
