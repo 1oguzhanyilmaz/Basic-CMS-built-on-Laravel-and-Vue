@@ -17,7 +17,7 @@
         },
         computed: {
             categoryLink(){
-                return `/categories/${this.category.id}/posts`;
+                return `/categories/${this.category.slug}/posts`;
             }
         },
         created() {

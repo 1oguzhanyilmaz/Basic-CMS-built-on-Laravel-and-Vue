@@ -53,35 +53,95 @@ class PostTableSeeder extends Seeder
         $post1 = $author1->posts()->create([
             'title' => 'The standard Lorem Ipsum passage, used since the 1500s',
             'description' => 'Lorem Ipsum',
-            'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
             'category_id' => $category1->id,
-            'image' => 'posts/1.jpg'
+            'image' => ''
         ]);
 
         $post2 = $author2->posts()->create([
             'title' => '1914 translation by H. Rackham',
             'description' => 'Translation',
-            'content' => 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth',
+            'content' => 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was 
+                            born and I will give you a complete account of the system, and expound the actual teachings 
+                            of the great explorer of the truth.
+                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was 
+                            born and I will give you a complete account of the system, and expound the actual teachings 
+                            of the great explorer of the truth.
+                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was 
+                            born and I will give you a complete account of the system, and expound the actual teachings 
+                            of the great explorer of the truth.
+                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was 
+                            born and I will give you a complete account of the system, and expound the actual teachings 
+                            of the great explorer of the truth',
             'category_id' => $category2->id,
-            'image' => 'posts/2.jpg'
+            'image' => ''
         ]);
 
         $post3 = $author1->posts()->create([
-            'title' => 'Post3',
+            'title' => 'lorem ipsum other',
             'description' => 'We relocated our office to a new designed garage',
-            'content' => 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will',
+            'content' => 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled 
+                            and demoralized by the charms of pleasure of the moment, so blinded by desire, that they 
+                            cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs 
+                            to those who fail in their duty through weakness of will.
+                            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled 
+                            and demoralized by the charms of pleasure of the moment, so blinded by desire, that they 
+                            cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs 
+                            to those who fail in their duty through weakness of will
+                            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled 
+                            and demoralized by the charms of pleasure of the moment, so blinded by desire, that they 
+                            cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs 
+                            to those who fail in their duty through weakness of will
+                            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled 
+                            and demoralized by the charms of pleasure of the moment, so blinded by desire, that they 
+                            cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs 
+                            to those who fail in their duty through weakness of will',
             'category_id' => $category3->id,
             'user_id' => $author1->id,
-            'image' => 'posts/3.jpg'
+            'image' => ''
         ]);
 
         $post4 = $author2->posts()->create([
             'title' => '1914 translation by H. Rackham',
             'description' => 'Rackam',
-            'content' => 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will',
+            'content' => 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled 
+                            and demoralized by the charms of pleasure of the moment, so blinded by desire, 
+                            that they cannot foresee the pain and trouble that are bound to ensue; and equal blame 
+                            belongs to those who fail in their duty through weakness of will.
+                            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled 
+                            and demoralized by the charms of pleasure of the moment, so blinded by desire, 
+                            that they cannot foresee the pain and trouble that are bound to ensue; and equal blame 
+                            belongs to those who fail in their duty through weakness of will
+                            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled 
+                            and demoralized by the charms of pleasure of the moment, so blinded by desire, 
+                            that they cannot foresee the pain and trouble that are bound to ensue; and equal blame 
+                            belongs to those who fail in their duty through weakness of will.On the other hand, we denounce with righteous indignation and dislike men who are so beguiled 
+                            and demoralized by the charms of pleasure of the moment, so blinded by desire, 
+                            that they cannot foresee the pain and trouble that are bound to ensue; and equal blame 
+                            belongs to those who fail in their duty through weakness of will
+                            ',
             'category_id' => $category4->id,
             'user_id' => $author1->id,
-            'image' => 'posts/4.jpg'
+            'image' => ''
         ]);
 
         $tag1 = Tag::create([

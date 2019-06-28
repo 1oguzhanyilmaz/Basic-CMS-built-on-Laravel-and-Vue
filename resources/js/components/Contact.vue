@@ -4,18 +4,22 @@
             <div class="card">
                 <div class="card-header">Contact</div>
                 <div class="card-body">
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
-                    <p>Contact Contact Contact</p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
+                    <p>Contact </p>
                 </div>
             </div>
         </div>

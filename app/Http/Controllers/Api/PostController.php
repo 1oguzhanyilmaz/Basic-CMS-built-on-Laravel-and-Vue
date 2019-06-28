@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Category;
 use App\Http\Resources\PostResource;
 use App\Post;
 use Illuminate\Http\Request;
@@ -15,12 +16,13 @@ class PostController extends Controller
         return PostResource::collection(Post::latest()->paginate(5));
     }
 
-    public function show($id){
-        return new PostResource(Post::findOrFail($id));
+    public function show($slug){
+        return new PostResource(Post::where('slug', $slug)->first());
     }
 
-    public function getPosts($id){
+    public function getPosts($slug){
         // return new PostResource(Post::where('category_id', $id)->get());
-        return PostResource::collection(Post::where('category_id', $id)->latest()->paginate(5));
+        $category = Category::where('slug',$slug)->first();
+        return PostResource::collection(Post::where('category_id', $category->id)->latest()->paginate(5));
     }
 }

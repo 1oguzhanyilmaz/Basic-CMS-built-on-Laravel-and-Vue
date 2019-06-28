@@ -12,6 +12,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Post from './components/Post';
 import CategoryPosts from './components/CategoryPosts';
+import NotFoundComponent from './components/NotFoundComponent';
 
 Vue.use(VueRouter);
 
@@ -21,8 +22,9 @@ const router = new VueRouter({
         { path: '/',            name: 'home',       component: Home,},
         { path: '/about',       name: 'about',      component: About,},
         { path: '/contact',     name: 'contact',    component: Contact,},
-        { path: '/posts/:id',   name: 'post',       component: Post,},
-        { path: '/categories/:category_id/posts',   name: 'category-posts',  component: CategoryPosts,},
+        { path: '/posts/:slug', name: 'post',       component: Post,},
+        { path: '/categories/:slug/posts', name: 'category-posts',  component: CategoryPosts,},
+        { path: '*', name: 'not-found', component: NotFoundComponent},
     ],
 });
 
